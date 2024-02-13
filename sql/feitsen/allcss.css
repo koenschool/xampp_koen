@@ -1,0 +1,14 @@
+body, button, input{
+    background-color:black;
+    color:deepskyblue;
+    font-family: monospace;
+}
+
+input{
+    border-color:cornflowerblue;
+}
+
+*{
+    color:deepskyblue;
+    font-family: monospace;
+}

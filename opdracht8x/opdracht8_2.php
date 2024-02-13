@@ -6,7 +6,7 @@
 include "connect.php";
 
 // maak een query
-$sql="SELECT * FROM feitsen";
+$sql="SELECT * FROM fietsen";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result =$stmt->fetchALL(PDO::FETCH_ASSOC);
