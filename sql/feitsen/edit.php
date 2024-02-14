@@ -50,7 +50,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "er is gepost<br>";
-    print_r($_POST);
 include "connect.php";
 
 
@@ -65,7 +64,8 @@ $query->execute(
         'merk'=>$_POST['merk'],
         'type'=>$_POST['type'],
         'prijs'=>$_POST['prijs'],
-        'foto'=>$_POST['foto']
+        'foto'=>$_POST['foto'],
+        'id'=>$_POST['id']
     ]
 );
 

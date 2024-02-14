@@ -1,0 +1,10 @@
+    *{
+    background-color:black;
+    border-color:cornflowerblue;
+    color:deepskyblue;
+    font-family: monospace;
+}
+
+.leerling{
+    cursor:pointer;
+}

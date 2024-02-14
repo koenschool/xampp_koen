@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>fietsen Form</title>
+  <link rel="stylesheet" href="allcss.css">
 </head>
 <body>
 
@@ -32,7 +33,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "er is gepost<br>";
-    print_r($_POST);
 include "connect.php";
 
 
@@ -50,7 +50,7 @@ $query->execute(
         'foto'=>$_POST['foto']
     ]
 );
-
+echo "<script>location.replace('select.php'); </script>";
 
 }
 
