@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fietsen Form</title>
+  <title>fiets Form</title>
   <link rel="stylesheet" href="allcss.css">
 </head>
 <body>
 
-<h2>fietsen Form</h2>
+<h2>fiets Form</h2>
 
 <form method="post">
   <label for="merk">Merk:</label>

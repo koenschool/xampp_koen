@@ -1,6 +1,6 @@
 <?php
 // gemaakt door koen polfliet
-//functie connectie maken met data base fietsen maken
+//functie connectie maken met data base fiets maken
 
 $servername = "localhost";
 $username = "root";

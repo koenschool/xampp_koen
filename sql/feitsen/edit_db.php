@@ -26,10 +26,10 @@ $stmt->execute(
 );
 
     if($stmt->rowCount() == 1){
-        echo "<script>alert('Fiets is gewijzigd')</script>";
+        echo "<script>alert('fiets is gewijzigd')</script>";
         echo "<script>location.replace('select.php'); </script>";
     } else{
-        echo '<script>alert("Fiets is NIET gewijzigd")</scriptlocation.replace>';
+        echo '<script>alert("fiets is NIET gewijzigd")</scriptlocation.replace>';
     }
     echo "<script>location.replace('select.php'); </script>";
 

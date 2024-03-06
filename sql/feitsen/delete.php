@@ -18,10 +18,10 @@ $stmt->execute(
 );
 
     if($stmt->rowCount() == 1){
-        echo "<script>alert('Fiets is verijderd')</script>";
+        echo "<script>alert('fiets is verijderd')</script>";
         echo "<script>location.replace('select.php'); </script>";
     } else{
-        echo '<script>alert("Fiets is NIET verwijderd")</scriptlocation.replace>';
+        echo '<script>alert("fiets is NIET verwijderd")</scriptlocation.replace>';
     }
 
 
