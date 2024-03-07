@@ -173,7 +173,7 @@ function updatebrouwer($row){
     $sql = "UPDATE " . CRUD_TABLE .
     " SET 
         naam = :naam, 
-        land = :land, 
+        land = :land 
     WHERE brouwcode = :brouwcode
     ";
 
