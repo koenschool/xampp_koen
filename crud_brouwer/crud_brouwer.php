@@ -10,7 +10,7 @@
 
     <?php
     // functie: Programma CRUD brouwer
-    // auteur: Wigmans   
+    // auteur: Koen   
 
     // Initialisatie
     include 'functions.php';

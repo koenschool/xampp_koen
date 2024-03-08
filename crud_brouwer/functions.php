@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: Koen
 // functie: algemene functies tbv hergebruik
 
 include_once "config.php";
@@ -146,13 +146,13 @@ function printCrudbrouwer($result){
         
         // Wijzig knopje
         $table .= "<td>
-            <form method='post' action='update_brouwer.php?id=$row[brouwcode]' >       
+            <form method='post' action='update_brouwer.php?brouwcode=$row[brouwcode]' >       
                 <button>Wzg</button>	 
             </form></td>";
 
         // Delete knopje
         $table .= "<td>
-            <form method='post' action='delete_brouwer.php?id=$row[brouwcode]' >       
+            <form method='post' action='delete_brouwer.php?brouwcode=$row[brouwcode]' >       
                 <button>Verwijder</button>	 
             </form></td>";
 

@@ -1,8 +1,7 @@
 <?php
-// auteur: Wigmans
+// auteur: Koen
 // functie: verwijder een bier op basis van de id
 include 'functions.php';
-
 // Haal bier uit de database
 if(isset($_GET['brouwcode'])){
 
@@ -15,4 +14,3 @@ if(isset($_GET['brouwcode'])){
     }
 }
 ?>
-

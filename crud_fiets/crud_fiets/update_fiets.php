@@ -1,6 +1,6 @@
 <?php
     // functie: update fiets
-    // auteur: Wigmans
+    // auteur: Koen
 
     require_once('functions.php');
 

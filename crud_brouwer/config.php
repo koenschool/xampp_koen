@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: Koen
 // functie: configuratiebestand
 
 define("DATABASE", "bieren");

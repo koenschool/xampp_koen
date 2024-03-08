@@ -1,6 +1,6 @@
 <?php
     // functie: formulier en database insert fiets
-    // auteur: Wigmans
+    // auteur: Koen
 
     echo "<h1>Insert fiets</h1>";
 

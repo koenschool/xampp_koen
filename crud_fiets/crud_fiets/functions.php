@@ -1,5 +1,5 @@
 <?php
-// auteur: Wigmans
+// auteur: Koen
 // functie: algemene functies tbv hergebruik
 
 include_once "config.php";

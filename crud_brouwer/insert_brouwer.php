@@ -1,6 +1,6 @@
 <?php
     // functie: formulier en database insert brouwer
-    // auteur: Wigmans
+    // auteur: Koen
 
     echo "<h1>Insert brouwer</h1>";
 

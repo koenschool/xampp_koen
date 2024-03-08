@@ -10,7 +10,7 @@
 
     <?php
     // functie: Programma CRUD fiets
-    // auteur: Wigmans   
+    // auteur: Koen   
 
     // Initialisatie
     include 'functions.php';

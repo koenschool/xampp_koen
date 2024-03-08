@@ -1,6 +1,6 @@
 <?php
     // functie: update brouwer
-    // auteur: Wigmans
+    // auteur: Koen
 
     require_once('functions.php');
 
@@ -16,10 +16,10 @@
     }
 
     // Test of id is meegegeven in de URL
-    if(isset($_GET['id'])){  
+    if(isset($_GET['brouwcode'])){  
         // Haal alle info van de betreffende id $_GET['id']
-        $id = $_GET['id'];
-        $row = getbrouwer($id);
+        $brouwcode = $_GET['brouwcode'];
+        $row = getbrouwer($brouwcode);
     
 ?>
 
