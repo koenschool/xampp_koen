@@ -10,7 +10,7 @@ if(isset($_GET['brouwcode'])){
         echo '<script>alert("brouwercode: ' . $_GET['brouwcode'] . ' is verwijderd")</script>';
         echo "<script> location.replace('crud_brouwer.php'); </script>";
     } else {
-        echo '<script>alert("brouwer is NIET verwijderd")</script>';
+        echo '<script>alert("brouwer is NIET verwijderd omdat het nog verbonden is aan een bier")</script>';
     }
 }
 ?>

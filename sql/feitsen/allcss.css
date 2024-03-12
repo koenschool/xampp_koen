@@ -12,3 +12,7 @@ input{
     color:deepskyblue;
     font-family: monospace;
 }
+
+.rechts{
+    text-align:right;
+}

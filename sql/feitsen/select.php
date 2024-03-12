@@ -44,7 +44,7 @@ echo "<br>";
 echo "<table border=1px   style='max-width: 100px;'";
     echo "<tr>";
     echo "<th>". "merk"."";
- "<th>". "id"."";
+    echo "<th>". "id"."";
     echo "<th>". "type"."";
     echo "<th>". "prijs"."";
     echo "<th>". "foto"."";
@@ -56,7 +56,7 @@ foreach ($result as $row) {
     echo "<td>". $row['merk'] . "";
     echo "<td>". $row['id'] . "";
     echo "<td>". $row['type']. "";
-    echo "<td>". $row['prijs']."";
+    echo "<td class='rechts'>". $row['prijs']."";
     echo "<td>". "<img src=img/". $row['foto']. " width='100%' ' height='100%' ></td>";
     echo "<td><a href='edit.php?id=" . $row['id'] ."'>" . "wijzig</a></td>";
     echo "<td><a href='delete.php?id=" . $row['id'] ."'>" . "verwijder</a></td>";

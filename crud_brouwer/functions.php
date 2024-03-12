@@ -216,6 +216,7 @@ function insertbrouwer($post){
 }
 
 function deletebrouwer($brouwcode){
+    try {
 
     // Connect database
     $conn = connectDb();
@@ -235,7 +236,12 @@ function deletebrouwer($brouwcode){
 
     // test of database actie is gelukt
     $retVal = ($stmt->rowCount() == 1) ? true : false ;
+    throw new customException;
     return $retVal;
+    } 
+    catch(PDOException) {
+        echo '<script>alert(het is niet gelukt)</script>'; 
+    }
 }
 
 ?>
