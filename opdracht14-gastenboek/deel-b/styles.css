@@ -1,0 +1,33 @@
+*{
+    font-family:monospace;
+    color:deepskyblue;
+    font-size:large;
+    background-color:black;
+}
+body, .a2{
+    font-family:monospace;
+    color:deepskyblue;
+    font-size:large;
+}
+input{
+    border-color:black;
+    
+}
+table{
+    border-color:black;
+}
+a{
+    color:cornflowerblue;
+}
+#vulling{
+    margin-bottom: 7%;
+}
+
+button a{
+    color:deepskyblue;
+    text-decoration:none;
+}
+
+button, input{
+    border-color: aqua;
+}
