@@ -48,9 +48,9 @@ if(isset($_SESSION['username'])){
     echo "<br>";
     if($_SESSION['username'] == 'admin'){
         foreach ($result as $row) {
-            echo "<div id=deela".$row['berichtid'].">";
-            echo "Gebruikersnaam: <div id='gebruiker". $row['berichtid'] ."'>". $row['naam']."</div><br>";
-            echo "Bericht: <div id='bericht". $row['berichtid'] ."'>".$row['bericht']."</div><br>";
+            echo "<div class='breed' id=deela".$row['berichtid'].">";
+            echo "<h1>Gebruikersnaam:</h1> <div class='head' id='gebruiker". $row['berichtid'] ."'>". $row['naam']."</div><br>";
+            echo "<h1>Bericht:</h1> <div class='head' id='bericht". $row['berichtid'] ."'>".$row['bericht']."</div><br>";
             echo "Datum: ".$row['datumtijd']."<br>";
             echo "<input type='number' id='berichtid' name='berichtid' hidden value=".$row['berichtid']."></input><br>";
             echo "<div id=deelb".$row['berichtid']."></div></div>";

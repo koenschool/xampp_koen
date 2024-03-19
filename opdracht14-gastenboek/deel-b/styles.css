@@ -19,7 +19,7 @@ table{
 a{
     color:cornflowerblue;
 }
-#vulling{
+.vulling{
     margin-bottom: 7%;
 }
 
@@ -30,4 +30,15 @@ button a{
 
 button, input{
     border-color: aqua;
+}
+.head{
+    color:dodgerblue;
+    font-size:large;
+    border-color:white;
+    border: 1px solid;
+
+}
+
+.breed{
+    width:20%;
 }

@@ -210,12 +210,12 @@ function insertbier($post){
     // Prepare query
     $stmt = $conn->prepare($sql);
     // Uitvoeren
-    $stmt->execute([
-        ':naam'=>$row['naam'],
-        ':soort'=>$row['soort'],
-        ':stijl'=>$row['stijl'],
-        ':alcohol'=>$row['alcohol'],
-        ':brouwcode'=>$row['brouwcode'],
+    $stmt->execute([    
+        ':naam'=>$_POST['naam'],
+        ':soort'=>$_POST['soort'],
+        ':stijl'=>$_POST['stijl'],
+        ':alcohol'=>$_POST['alcohol'],
+        ':brouwcode'=>$_POST['brouwcode'],
     ]);
 
     
@@ -230,7 +230,7 @@ function deletebier($biercode){
     // Connect database
     $conn = connectDb();
     
-    // Maak een query 
+    // Maak een query  
     $sql = "
     DELETE FROM " . CRUD_TABLE . 
     " WHERE biercode = :biercode";

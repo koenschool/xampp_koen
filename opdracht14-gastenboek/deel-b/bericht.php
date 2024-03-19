@@ -22,7 +22,7 @@ if(isset($_SESSION['username'])){
       <label for="bericht">bericht</label><br>
       <input type="text" id="bericht" name="bericht" ><br>
     
-      <input type="submit" name="opslaan" id="vulling" value="opslaan">
+      <input type="submit" name="opslaan" class="vulling" value="opslaan">
     </form>
     <hr>';
 }
