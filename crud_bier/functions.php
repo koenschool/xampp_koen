@@ -26,6 +26,8 @@ include_once "config.php";
 
  
  // selecteer de data uit de opgeven table
+
+ 
  function getData($table){
     // Connect database
     $conn = connectDb();
@@ -173,9 +175,9 @@ function updatebier($row){
     $sql = "UPDATE " . CRUD_TABLE .
     " SET 
         naam = :naam, 
-        soort = :soort 
-        stijl = :stijl
-        alcohol = :alcohol
+        soort = :soort, 
+        stijl = :stijl,
+        alcohol = :alcohol,
         brouwcode = :brouwcode
     WHERE biercode = :biercode
     ";
@@ -190,6 +192,12 @@ function updatebier($row){
         ':alcohol'=>$row['alcohol'],
         ':brouwcode'=>$row['brouwcode'],
         ':biercode'=>$row['biercode']
+        // ':naam'=>$_POST['naam'],
+        // ':soort'=>$_POST['soort'],
+        // ':stijl'=>$_POST['stijl'],
+        // ':alcohol'=>$_POST['alcohol'],
+        // ':brouwcode'=>$_POST['brouwcode'],
+        // ':biercode'=>$_POST['biercode']
     ]);
 
     // test of database actie is gelukt
@@ -225,7 +233,7 @@ function insertbier($post){
 }
 
 function deletebier($biercode){
-    try {
+
 
     // Connect database
     $conn = connectDb();
@@ -245,12 +253,10 @@ function deletebier($biercode){
 
     // test of database actie is gelukt
     $retVal = ($stmt->rowCount() == 1) ? true : false ;
-    throw new customException;
+
     return $retVal;
-    } 
-    catch(PDOException) {
-        echo '<script>alert(het is niet gelukt)</script>'; 
-    }
+    
+
 }
 
 ?>

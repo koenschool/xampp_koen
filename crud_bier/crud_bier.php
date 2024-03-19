@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <a href="#bottom">ga naar beneden</a>   
     <?php
     // functie: Programma CRUD bier
     // auteur: Koen   

@@ -16,6 +16,14 @@
             echo '<script>alert("bier is NIET toegevoegd")</script>';
         }
     }
+    try{
+        $db = new PDO("mysql:host=localhost;dbname=bieren","root", "");
+        $query = $db->query("SELECT brouwcode FROM bier");
+        $table = $query->fetchALL(PDO::FETCH_ASSOC);
+        } catch(PDOException $e){
+        die("Error!: " . $e->getMessage());
+    }
+
 ?>
 <html>
     <body>
@@ -34,7 +42,16 @@
         <input type="number" id="alcohol" name="alcohol" required><br>
 
         <label for="brouwcode">brouwcode:</label>
-        <input type="number" id="brouwcode" name="brouwcode" required><br>
+        <select required name="brouwcode" id="bouwcode">
+        <?php
+        foreach ($table as $row) {
+            echo "<option value='" . $row['brouwcode'] . "'>" . $row['brouwcode'] . "</option>";
+        }
+        ?>
+        </select><br>
+
+        <!-- <label for="brouwcode">brouwcode:</label>
+        <input type="number" id="brouwcode" name="brouwcode" required><br> -->
 
         <input type="submit" name="btn_ins" value="Insert">
         </form>
