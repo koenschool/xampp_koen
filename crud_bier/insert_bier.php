@@ -4,8 +4,7 @@
 
     echo "<h1>Insert bier</h1>";
 
-    require_once('functions.php');
-	 
+    include 'functions.php';
     // Test of er op de insert-knop is gedrukt 
     if(isset($_POST) && isset($_POST['btn_ins'])){
 
@@ -16,13 +15,9 @@
             echo '<script>alert("bier is NIET toegevoegd")</script>';
         }
     }
-    try{
-        $db = new PDO("mysql:host=localhost;dbname=bieren","root", "");
-        $query = $db->query("SELECT brouwcode FROM bier");
-        $table = $query->fetchALL(PDO::FETCH_ASSOC);
-        } catch(PDOException $e){
-        die("Error!: " . $e->getMessage());
-    }
+
+
+    
 
 ?>
 <html>
@@ -42,11 +37,9 @@
         <input type="number" id="alcohol" name="alcohol" required><br>
 
         <label for="brouwcode">brouwcode:</label>
-        <select required name="brouwcode" id="bouwcode">
+        <select name="brouwcode" id="bouwcode" required value="<?php echo $row['brouwcode']; ?>">
         <?php
-        foreach ($table as $row) {
-            echo "<option value='" . $row['brouwcode'] . "'>" . $row['brouwcode'] . "</option>";
-        }
+            gettable('brouwcode','naam', 'brouwer');
         ?>
         </select><br>
 

@@ -21,13 +21,6 @@
         $biercode = $_GET['biercode'];
         $row = getbier($biercode);
     
-        try{
-          $db = new PDO("mysql:host=localhost;dbname=bieren","root", "");
-          $query = $db->query("SELECT brouwcode FROM bier");
-          $table = $query->fetchALL(PDO::FETCH_ASSOC);
-          } catch(PDOException $e){
-          die("Error!: " . $e->getMessage());
-      }
 
 ?>
 
@@ -60,15 +53,7 @@
       <label for="brouwcode">brouwcode:</label>
         <select name="brouwcode" id="bouwcode" required value="<?php echo $row['brouwcode']; ?>">
         <?php
-        $tablee = array_unique($table, SORT_REGULAR);
-        foreach ($tablee as $roww) {
-          if($roww['brouwcode'] == $row['brouwcode']){
-            echo "<option selected='selected' value='" . $roww['brouwcode'] . "'>" . $roww['brouwcode'] . "</option>";
-            }
-            else{
-              echo "<option value='" . $roww['brouwcode'] . "'>" . $roww['brouwcode'] . "</option>";
-            }
-        }
+            gettable('brouwcode','naam', 'brouwer');
         ?>
         </select><br>
     

@@ -25,9 +25,39 @@ include_once "config.php";
  }
 
  
+ function gettable($data, $data2 , $base){
+    if(isset($_GET['biercode'])){  
+        // Haal alle info van de betreffende id $_GET['id']
+        $biercode = $_GET['biercode'];
+        $row = getbier($biercode);
+    }
+    try{
+    $db = new PDO("mysql:host=localhost;dbname=bieren","root", "");
+    $query = $db->query("SELECT $data, $data2 FROM $base");
+    $database = $query->fetchALL(PDO::FETCH_ASSOC);
+} catch(PDOException $e){
+    die("Error!: " . $e->getMessage());
+}
+    $database = array_unique($database, SORT_REGULAR);
+    echo $database[$data];
+    foreach ($database as $roww) {
+      if($roww[$data] == $row['brouwcode']){
+        echo "<option selected='selected'a value='" . $roww[$data] . "'>" . $roww[$data]." = ". $roww[$data2] . "</option>";
+        }
+        else{
+          echo "<option value='" . $roww[$data]. "'>" . $roww[$data]." = ". $roww[$data2] . "</option>";
+        }
+    }
+ }
+
+
+
+
  // selecteer de data uit de opgeven table
 
  
+
+
  function getData($table){
     // Connect database
     $conn = connectDb();
@@ -41,6 +71,8 @@ include_once "config.php";
     $query = $conn->prepare($sql);
     $query->execute();
     $result = $query->fetchAll();
+
+
 
     return $result;
  }
@@ -191,7 +223,7 @@ function updatebier($row){
         ':stijl'=>$row['stijl'],
         ':alcohol'=>$row['alcohol'],
         ':brouwcode'=>$row['brouwcode'],
-        ':biercode'=>$row['biercode']
+        ':biercode'=>$row['biercode'] 
         // ':naam'=>$_POST['naam'],
         // ':soort'=>$_POST['soort'],
         // ':stijl'=>$_POST['stijl'],
