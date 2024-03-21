@@ -50,7 +50,7 @@ if(isset($_SESSION['username'])){
         foreach ($result as $row) {
             echo "<div class='breed' id=deela".$row['berichtid'].">";
             echo "<h1>Gebruikersnaam:</h1> <div class='head' id='gebruiker". $row['berichtid'] ."'>". $row['naam']."</div><br>";
-            echo "<h1>Bericht:</h1> <div class='head' id='bericht". $row['berichtid'] ."'>".$row['bericht']."</div><br>";
+            echo "<h1>Bericht:</h1> <div class='head' id='bericht". $row['berichtid'] ."'>".$row['bericht']."</div><br><br>";
             echo "Datum: ".$row['datumtijd']."<br>";
             echo "<input type='number' id='berichtid' name='berichtid' hidden value=".$row['berichtid']."></input><br>";
             echo "<div id=deelb".$row['berichtid']."></div></div>";
@@ -61,8 +61,8 @@ if(isset($_SESSION['username'])){
     }
 else{
     foreach ($result as $row) {
-        echo "<div id='gebruiker'>Gebruikersnaam: ". $row['naam']."</div><br>";
-        echo "<div id='bericht'>Bericht: ".$row['bericht']."</div><br>";
+        echo "<h1>Gebruikersnaam:</h1> <div class='head' id='gebruiker'>Gebruikersnaam: ". $row['naam']."</div><br>";
+        echo "<h1>Bericht:</h1> <div class='head' id='bericht'>Bericht: ".$row['bericht']."</div><br><br>";
         echo "Datum: ".$row['datumtijd']."<br>";
         echo "<div id='berichtid' hidden>ID:".$row['berichtid']."</div><br><hr>";
     }
