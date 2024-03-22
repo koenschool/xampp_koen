@@ -36,5 +36,4 @@ button, input{
     display:inline-flex;
     font-size:large;
     border: 2px solid dodgerblue;
-    border-width: auto;
 }

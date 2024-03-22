@@ -31,14 +31,15 @@ include_once "config.php";
         $biercode = $_GET['biercode'];
         $row = getbier($biercode);
     }
-    try{
-    $db = new PDO("mysql:host=localhost;dbname=bieren","root", "");
-    $query = $db->query("SELECT $data, $data2 FROM $base");
-    $database = $query->fetchALL(PDO::FETCH_ASSOC);
-} catch(PDOException $e){
-    die("Error!: " . $e->getMessage());
-}
-    $database = array_unique($database, SORT_REGULAR);
+    $database = getData('brouwer');
+//     try{
+//     $db = new PDO("mysql:host=localhost;dbname=bieren","root", "");
+//     $query = $db->query("SELECT $data, $data2 FROM $base");
+//     $database = $query->fetchALL(PDO::FETCH_ASSOC);
+// } catch(PDOException $e){
+//     die("Error!: " . $e->getMessage());
+// }
+    // $database = array_unique($database, SORT_REGULAR);
     echo $database[$data];
     foreach ($database as $roww) {
       if($roww[$data] == $row['brouwcode']){

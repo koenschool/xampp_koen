@@ -60,6 +60,7 @@ foreach ($result as $row) {
         $sql = "UPDATE optie SET stemmen = stemmen + 1 WHERE id=$kies";
         $db->query($sql);
         $kies = null;
+        header("Refresh:0");
 
       }
 

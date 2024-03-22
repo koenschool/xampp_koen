@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gastenboek</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="code.js"></script>
+  <link rel="stylesheet" href="styles.css?v=<?php echo time();?>">
+  <script defer src="code.js?v=<?php echo time();?>"></script>
 </head>
 <body>
     

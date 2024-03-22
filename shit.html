@@ -1,0 +1,35 @@
+
+
+<html>
+    <head>
+        <style>
+            .flex-container {
+                width: 400px;
+                height: 200px;
+                border: 1px solid black;
+                display: flex;
+                align-items: start;
+            }
+            
+            .input-grow, .div-grow {
+                flex-grow: 1;
+                border: 1px solid red;
+                font-size: 29px;
+                width: 1px; /*why is this working????*/
+            }
+            
+            .div-no-grow {
+                border: 1px solid blue;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <input class="input-grow" type="text" placeholder="Type text..." />
+            <!--<div class="div-grow">I grow</div>-->
+            <div class="div-no-grow">I do not grow</div>
+        </div>
+    </body>
+</html>
+
