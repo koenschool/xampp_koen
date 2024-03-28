@@ -1,43 +1,23 @@
 <?php
+
+echo "<style>a {
+  color: blue;
+  text-decoration: inherit;
+}</style>";
 // gemaakt door koen polfliet
 //functie connectie maken met data base fiets maken
-function connectdb(){
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "polls";
-
-
-  try {
-    $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "Connected successfully<br>";
-    return $db;
-  } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-  }
-}
+include "functions.php";
 
 
 
-    $db = connectDb();
-    function get($data, $base){
-      global $db;
-      $query = $db->query("SELECT $data FROM $base");
-      $query->execute();
-      $result = $query->fetchALL(PDO::FETCH_ASSOC);
-      return $result;
-    }
-
-
-
-    $result = get("*", "poll");
-    $resultt  = get("*", "optie");
-    $resulttt  = get("poll", "optie");
+    $result = get("*", "poll", false);
+    $resultt  = get("*", "optie", false);
+    $resulttt  = get("poll", "optie", false);
 foreach ($result as $row) {
   echo "<form method='post'>";
           echo $row["vraag"],"<br>";
+          echo "<a href='edit.php?id=" . $row['id'] ."'>" . "wijzig</a><br>";
+          echo "<a href='delete.php?id=" . $row['id'] ."'>" . "verwijder</a><br>";
       foreach ($resultt as $roww) {   
         if($row["id"] == $roww["poll"]){
         echo "<input type='radio' name='kies' value='" . $roww["id"] . "' required>" . $roww["optie"] . "</input><br>";
