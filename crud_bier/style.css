@@ -12,3 +12,8 @@ table, th, td {
 th{
     background-color: grey;    
 }
+
+a{
+    color:crimson;
+    text-decoration: none;
+}

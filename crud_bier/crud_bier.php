@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <top id="top"></top>
     <a href="#bottom">ga naar beneden</a>   
     <?php
     // functie: Programma CRUD bier
@@ -20,7 +21,8 @@
     // Aanroep functie 
     crudbier();
     ?>
-
+        <a href="#top">ga naar boven</a>   
+    <bottom id="bottom"></bottom>
 </body>
 </html>
 
