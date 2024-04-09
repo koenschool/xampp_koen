@@ -3,6 +3,8 @@
 </head>
 <?php
     $server = $_SERVER['HTTP_USER_AGENT'];
+    echo $server. "<br>";
+    
     switch($server){
         case strpos($server, "Firefox") !== false : $browser="Firefox"; echo "U gebruikt Firefox"; break;
         case strpos($server, "MSIE") !== false: $browser="MSIE" ; echo "U gebruikt Internet Explorer"; break;
