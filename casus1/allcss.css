@@ -1,0 +1,34 @@
+body, button, input{
+    background-color:black;
+    color:deepskyblue;
+    font-family: monospace;
+}
+
+input{
+    border-color:dodgerblue;
+}
+
+*{
+    color:deepskyblue;
+    font-family: monospace;
+}
+
+.rechts{
+    text-align:right;
+}
+
+
+body, .a2{
+    font-family:monospace;
+    color:deepskyblue;
+    background-color:#515151;
+    font-size:large;
+}
+table{
+    width:500px;
+    border-color:black;
+    background-color:black;
+}
+a{
+    color:dodgerblue;
+}
