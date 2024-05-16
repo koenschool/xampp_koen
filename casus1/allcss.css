@@ -25,10 +25,25 @@ body, .a2{
     font-size:large;
 }
 table{
+    float:right;
     width:500px;
     border-color:black;
     background-color:black;
 }
 a{
     color:dodgerblue;
+}
+
+.links, .rechts{
+    display:inline-block;
+    width:50%;
+}
+
+.links{
+    float:left;
+}
+
+.rechts{
+    text-align: right;
+    float:right;
 }

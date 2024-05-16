@@ -8,7 +8,7 @@
 </head>
 <body>
     
- 
+<div class="links">
 <?php
 // gemaakt door Koen Polfliet
 // functie selecteer data
@@ -56,12 +56,9 @@ if($_SESSION['mode'] == 'admin'){
 
 
 ?>
+</div>
+<div class="rechts">
 <h2>tabel ziekmelding docenten</h2>
-<?php
-if($_SESSION['mode'] == 'admin'){
-echo "<p>Klik op het kruis om een record te verwijderen</p>";
-}
-?>
 <table border='1px'>
     <tr>
 <th>docent naam</th>
@@ -84,7 +81,12 @@ foreach ($result as $row) {
     }
     echo "</tr>";
 }
+if($_SESSION['mode'] == 'admin'){
+echo "<p>Klik op het kruis om een record te verwijderen</p>";
+}
+echo "</div>";
 ?>
+
 </table>
 </body>
 </html>
