@@ -1,0 +1,48 @@
+body, button, input{
+    background-color:black;
+    color:white;
+    font-family: monospace;
+}
+
+input{
+    border-color:black;
+}
+
+*{
+    color:white;
+    font-family: monospace;
+}
+
+.center{
+    text-align:center;
+}
+
+
+body, .a2, option, select{
+    font-family:monospace;
+    color:white;
+    background-color:#515151;
+    font-size:large;
+}
+/* 
+.news{
+    display: flex;
+}
+
+.in{
+    overflow: hidden;
+} */
+
+table{
+    width:500px;
+    border-color:black;
+    background-color:black;
+}
+
+a{
+    cursor: pointer ;
+    color:blue;
+}
+
+
+
