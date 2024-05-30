@@ -1,0 +1,19 @@
+*{
+    color:#17B978;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body{
+    background-color:#071A52;
+    font-size:large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table{
+    background-color: #086972;
+}
+
+td, th{
+    color:#A7FF83;
+}
