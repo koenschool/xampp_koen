@@ -6,11 +6,13 @@ class product
 
     public $price;
 
-    public function setname($name)
-    {
+
+    public function __construct($name, $price){
         $this->name =ucfirst($name);
-        // $this->name = $name;
+        $this->price = $price;
     }
+
+
 
     public function formatprice()
     {
@@ -19,14 +21,11 @@ class product
 
 }
 
-$game1 = new product();
-$game1->setname("fifa 21");
+$game1 = new product("fifa 21", 59.99);
 
-$game1->price = 59.99;
 
-$game2 = new product();
-$game2->name = "Call of Duty";
-$game2->price = 69.99;
+$game2 = new product("Call of Duty", 69.99);
+
 
 echo $game1->formatprice(). "<br>";
 echo $game1->name. "<br>";
