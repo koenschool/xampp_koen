@@ -1,0 +1,45 @@
+*{
+    color:#00ADB5;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+body{
+    background-color:#222831;
+    font-size:large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.reken{
+    border: #393E46 solid 4px;
+    width: 300px;
+    background-color: #575c65;
+    border-radius: 5%;
+}
+
+button{
+    width:40px;
+    height: 40px;
+    border: #393E46 solid 4px;
+    background-color:#222831 ;
+    color:#00ADB5;
+}
+
+input{
+    background-color: #222831;
+    color:#00ADB5;
+    border: #393E46 solid 4px;
+}
+
+#rond{
+    width:72px;
+    height: 40px;
+    border: #393E46 solid 4px;
+    background-color:#222831 ;
+    color:#00ADB5;
+}
+
+button:hover{
+    border: #00ADB5 solid 4px;
+}
+

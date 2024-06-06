@@ -15,7 +15,7 @@ include "connect.php";
 // aan het uit knop in de code om niet altijd iets naar de database te sturen
 $insert = true;
 $showdata = false;
-
+    
 // land ophalen
 $land = file_get_contents("https://ipapi.co/languages");
 // ip adres ophalen
