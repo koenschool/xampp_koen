@@ -17,12 +17,20 @@ body{
     border-radius: 5%;
 }
 
-button{
+button, .bereken{
     width:40px;
     height: 40px;
     border: #393E46 solid 4px;
     background-color:#222831 ;
     color:#00ADB5;
+}
+
+.anders{
+    width: 100px;
+    background-color: #575c65;
+    border: #393E46 solid 4px;
+    border-radius: 5%;
+
 }
 
 input{
@@ -39,7 +47,7 @@ input{
     color:#00ADB5;
 }
 
-button:hover{
+button:hover, .bereken:hover{
     border: #00ADB5 solid 4px;
 }
 

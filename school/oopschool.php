@@ -1,4 +1,5 @@
 <?php
+// auther koen polfliet
 class Animal {
     public $name;
 

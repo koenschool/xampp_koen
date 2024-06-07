@@ -5,7 +5,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "berekeningen";
+$dbname = "casus4";
 
 
 try {
