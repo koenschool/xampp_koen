@@ -47,7 +47,7 @@
     <button onclick="cal(3)">3</button>
     <button onclick="cal('+')">+</button><br>
 
-    <button onclick="cal(0)">0</button>
+    <button onclick="cal(0)" style="width:80px;">0</button>
     <button onclick="cal('.')">.</button><br>
 
     <button onclick="cal('%')">mod</button>
