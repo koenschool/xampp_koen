@@ -91,7 +91,7 @@
 </tr>
 
     <?php
-    $sql="SELECT * FROM berekeningen";
+    $sql="SELECT * FROM berekeningen ORDER BY id DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result =$stmt->fetchALL(PDO::FETCH_ASSOC);

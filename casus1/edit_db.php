@@ -21,13 +21,13 @@ $stmt->execute(
     
 );
 
-    if($stmt->rowCount() == 1){
-        echo "<script>alert('ziekmelding is gewijzigd')</script>";
-        echo "<script>location.replace('select.php'); </script>";
-    } else{
-        echo '<script>alert("ziekmelding is NIET gewijzigd")</scriptlocation.replace>';
-    }
+if($stmt->rowCount() <= 1){
+    echo "<script>alert('ziekmelding is gewijzigd');</script>";
     echo "<script>location.replace('select.php'); </script>";
+} else{
+    echo '<script>alert("ziekmelding is NIET gewijzigd");</script>';
+    echo "<script>location.replace('select.php'); </script>";
+}
 
 }
 

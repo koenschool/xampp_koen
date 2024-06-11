@@ -4,10 +4,6 @@ function cal(num){
     var berekening = document.getElementById("berekening");
     var resultaat = document.getElementById("resultaat");
     
-
-
-
-
     switch(num){
         case 'c':
             berekening.value = '';
@@ -28,16 +24,6 @@ function cal(num){
             num2 = berekening.value + '√';
             berekening.value = Math.sqrt(berekening.value);
         break;
-        // case '%':
-        //     num2 = berekening.value + '√';
-        //     berekening.value = Math.sqrt(berekening.value);
-        // break;
-        // case '^':
-        //     num2 = berekening.value + '^';
-        //     berekening.value = num2;
-        //     macht=true;
-        //     alert(macht);
-        //     break;
         default:    
             num2 = berekening.value + num;
             berekening.value = num2;
@@ -51,17 +37,6 @@ function gebruik(bereken){
 }
 
 function test(){
-    console.log(eval(9 % 7));
+    console.log(eval(1.2 + 1.222).toFixed(3));
     // alert(Math.pow(6, 3));
 }
-// location.replace('select.php?berekening=',number1toString(),'&resultaat=',number2toString());
-// var number1 = document.getElementById('berekening').value;
-// var number2 = document.getElementById('resultaat').value;
-// var number1 = number1.toString();
-// var number2 = number2.toString();
-// location.replace('select.php?berekening=',number1,'&resultaat=',number2,'');
-// echo "<script>var number1 = document.getElementById('berekening').value;</script>";
-// echo "<script>var number2 = document.getElementById('resultaat').value;</script>";
-// echo "<script>var number1 = number1.toString();</script>";
-// echo "<script>var number2 = number2.toString();</script>";
-// echo "<script>location.replace('select.php?berekening=',number1,'&resultaat=',number2,'');</script>";
